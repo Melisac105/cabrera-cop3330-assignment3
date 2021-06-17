@@ -1,5 +1,6 @@
 /*
-
+UCF COP3330 Summer 2021 Assignment 1 Solution
+Copyright 2021 Melissa Cabrera
 
 Exercise 41 - Name Sorter
 Alphabetizing the contents of a file, or sorting its contents, is a great way to get comfortable manipulating a file in your program.
@@ -35,7 +36,6 @@ Don't hard-code the number of names.
 package ex41;
 
 import ex41.util.FileProcessing;
-
 import java.io.IOException;
 
 public class App {

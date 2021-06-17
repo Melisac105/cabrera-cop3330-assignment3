@@ -9,6 +9,7 @@ public class FileProcessing {
 
         String inputFile = "/Users/melissacabrera/Desktop/exercise41_input.txt";
 
+        //read file
         FileReader reader = new FileReader(inputFile);
         BufferedReader bufferedReader = new BufferedReader(reader);
         while ((inputFile = bufferedReader.readLine()) != null) {
