@@ -1,5 +1,5 @@
 /*
-UCF COP3330 Summer 2021 Assignment 1 Solution
+UCF COP3330 Summer 2021 Assignment 3 Solution
 Copyright 2021 Melissa Cabrera
 
 Exercise 41 - Name Sorter

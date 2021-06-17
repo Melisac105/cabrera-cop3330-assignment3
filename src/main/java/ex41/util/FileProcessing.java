@@ -5,6 +5,7 @@ import java.util.*;
 
 public class FileProcessing {
     static List<String> namesList = new ArrayList<>();
+
     static public void readFilesNames() throws IOException {
 
         String inputFile = "/Users/melissacabrera/Desktop/exercise41_input.txt";

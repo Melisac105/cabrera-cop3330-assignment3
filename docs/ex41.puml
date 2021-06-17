@@ -1,12 +1,16 @@
 @startuml
 
-class App{
+class App {}
 
-    readFile()
-    sortFileNames()
-    printOutput()
+class FileProcessing {
+    namesList : List
 
+    readFilesNames()
+    sortNames()
+    outputFiles()
 }
+
+App o--> FileProcessing
 
 
 
