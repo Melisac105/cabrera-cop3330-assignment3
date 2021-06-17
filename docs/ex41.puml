@@ -1,0 +1,14 @@
+@startuml
+
+class App{
+
+    readFile()
+    sortFileNames()
+    printOutput()
+
+}
+
+
+
+
+@enduml
