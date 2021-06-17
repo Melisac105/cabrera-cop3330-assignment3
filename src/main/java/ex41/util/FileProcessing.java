@@ -5,16 +5,18 @@ import java.util.*;
 
 public class FileProcessing {
     static List<String> namesList = new ArrayList<>();
+    static int numberOfNames = 0;
 
     static public void readFilesNames() throws IOException {
 
-        String inputFile = "/Users/melissacabrera/Desktop/exercise41_input.txt";
+        String inputFile = "/Users/melissacabrera/IdeaProjects/cabrera-cop3330-assignment3/src/main/java/ex41/inoutfiles/exercise41_input.txt";
 
         //read file
         FileReader reader = new FileReader(inputFile);
         BufferedReader bufferedReader = new BufferedReader(reader);
         while ((inputFile = bufferedReader.readLine()) != null) {
             namesList.add(inputFile);
+            numberOfNames+=1;
         }
         reader.close();
     }
@@ -28,6 +30,9 @@ public class FileProcessing {
 
         FileWriter writer = new FileWriter(outputFile);
         PrintWriter output = new PrintWriter(writer);
+
+        output.printf("Total of %d names\n", numberOfNames);
+        output.println("-----------------");
 
         for(String name : namesList) {
             output.println(name);
