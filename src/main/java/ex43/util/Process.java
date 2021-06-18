@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Map;
 
 public class Process {
+    public static String FILES_PATH = "src/main/java/ex43/files";
 
     public static void process(Map<String, String> websiteData) throws IOException {
         String name = websiteData.get("name");
@@ -14,7 +15,7 @@ public class Process {
 
         String htmlFileContent = Html.generateHtml(name, author);
 
-        String basePath = new File("src/main/java/ex43/files").getAbsolutePath();
+        String basePath = new File(FILES_PATH).getAbsolutePath();
         String websitePath = basePath +  "/" + name;
         String htmlFilePath = websitePath + "/index.html";
         String jsPath = websitePath + "/" + "js";
