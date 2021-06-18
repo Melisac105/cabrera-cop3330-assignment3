@@ -11,7 +11,12 @@ public class PrintFile {
         System.out.println("--------------------------------");
 
         for (Map<String, String> stringStringMap : fileList) {
-            System.out.printf("%s\t%s\t\t%s\t\n", stringStringMap.get("lastName"), stringStringMap.get("firstName"), stringStringMap.get("salary"));
+            System.out.printf(
+                    "%s\t%s\t\t%s\t\n",
+                    stringStringMap.get("lastName"),
+                    stringStringMap.get("firstName"),
+                    stringStringMap.get("salary")
+            );
         }
     }
 }

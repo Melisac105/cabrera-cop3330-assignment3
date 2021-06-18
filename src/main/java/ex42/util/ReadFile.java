@@ -12,7 +12,8 @@ public class ReadFile {
         Map<String, String> infoPerEmployee = new HashMap<>();
 
         //takes file path
-        File inputFile = new File("/Users/melissacabrera/IdeaProjects/cabrera-cop3330-assignment3/src/main/java/ex42/files/exercise42_input.txt");
+        String inputFilePath = new File("src/main/java/ex42/files/exercise42_input.txt").getAbsolutePath();
+        File inputFile = new File(inputFilePath);
 
         //reads file
         Scanner reader = new Scanner(inputFile);
