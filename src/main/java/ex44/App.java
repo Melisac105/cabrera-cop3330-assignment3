@@ -21,16 +21,14 @@ Constraints
 
 package ex44;
 
-import ex44.util.Files;
+import ex44.util.Process;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 
 public class App {
 
     public static void main(String[] args) throws FileNotFoundException {
-        String json = Files.getFileContent();
-        System.out.println(json);
+        Process.process();
     }
 
 }

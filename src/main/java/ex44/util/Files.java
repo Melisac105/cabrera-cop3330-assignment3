@@ -1,5 +1,7 @@
 package ex44.util;
 
+import com.google.gson.Gson;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -16,6 +18,10 @@ public class Files {
         }
 
         return json;
+    }
+
+    public static Products parseJson(String json) {
+        return new Gson().fromJson(json, Products.class);
     }
 
 }
