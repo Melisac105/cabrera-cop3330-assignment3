@@ -17,12 +17,11 @@ Constraints
 
 package ex45;
 
-import ex45.util.UsrInput;
+import ex45.util.Process;
+import java.io.IOException;
 
 public class App {
-
-    public static void main(String[] args) {
-        String fileName = UsrInput.getFileName();
+    public static void main(String[] args) throws IOException {
+        Process.process();
     }
-
 }
