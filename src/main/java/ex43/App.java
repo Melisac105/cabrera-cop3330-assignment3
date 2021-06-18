@@ -29,17 +29,16 @@ The user should then find these files and directories created in the working dir
 
 package ex43;
 
+import ex43.util.Process;
 import ex43.util.UsrInput;
+
+import java.io.IOException;
+import java.util.Map;
 
 public class App {
 
-    public static void main(String[] args) {
-
-        String name = UsrInput.readUsrInput("Site name");
-        String author = UsrInput.readUsrInput("Author: ");
-        String javaScript = UsrInput.readUsrInput("Do you want a folder for JavaScript? ");
-        String css = UsrInput.readUsrInput("Do you want a folder for CSS? ");
-
-
+    public static void main(String[] args) throws IOException {
+        Map<String, String> websiteData = UsrInput.getWebsiteData();
+        Process.process(websiteData);
     }
 }
