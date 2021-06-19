@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App {
+    +websiteData : Map
+}
+
+class UsrInput {
+    +{static}getWebsiteData()
+}
+
+class Files {
+    {static}createFolder()
+    {static}writeHtmlFile()
+}
+
+class Html {
+    +{static} generateHtml()
+}
+
+class Process {
+    +{static}FILES_PATH : String
+    +{static}process()
+}
+
+App o--> UsrInput
+App o--> Files
+App o--> Html
+App o--> Process
+@enduml

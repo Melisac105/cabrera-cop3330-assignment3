@@ -3,11 +3,12 @@
 class App {}
 
 class FileProcessing {
-    namesList : List
+    +{static}namesList : List
+    +{static}numberOfNames : int
 
-    readFilesNames()
-    sortNames()
-    outputFiles()
+    +{static}readFilesNames()
+    +{static}sortNames()
+    +{static}outputFiles()
 }
 
 App o--> FileProcessing

@@ -9,7 +9,6 @@ public class ReadFile {
     static public ArrayList<Map<String, String>> readFilesNames() throws IOException {
 
         ArrayList<Map<String, String>> fileList = new ArrayList<>();
-        Map<String, String> infoPerEmployee = new HashMap<>();
 
         //takes file path
         String inputFilePath = new File("src/main/java/ex42/files/exercise42_input.txt").getAbsolutePath();
@@ -30,12 +29,17 @@ public class ReadFile {
             //read each character of a line until next line
             while(readLine.hasNextLine()) {
 
-                //add info of each line into a map
-                infoPerEmployee.put("lastName", readLine.next());
-                infoPerEmployee.put("firstName", readLine.next());
-                infoPerEmployee.put("salary", readLine.next());
+                //initialize map everytime the loop runs
+                Map<String, String> employee = new HashMap<>();
+
+                //add info of each employee into map
+                employee.put("lastName", readLine.next());
+                employee.put("firstName", readLine.next());
+                employee.put("salary", readLine.next());
+
+                //add employee information into arrayList
+                fileList.add(employee);
             }
-            fileList.add(infoPerEmployee);
         }
         return fileList;
     }

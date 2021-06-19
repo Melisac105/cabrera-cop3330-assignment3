@@ -11,7 +11,7 @@ public class Process {
         String fileContent = Files.readFileContent(wordsFilePath);
 
         String[] words = fileContent.trim().split("\s+");
-        HashMap<String, Integer> wordsCount = new HashMap();
+        HashMap<String, Integer> wordsCount = new HashMap<>();
 
         for (String word : words) {
             int count = 0;
@@ -24,17 +24,13 @@ public class Process {
         }
 
 
-        /**
+        /*
          * - https://stackoverflow.com/questions/2839137/how-to-use-comparator-in-java-to-sort
          * - https://beginnersbook.com/2013/12/how-to-sort-hashmap-in-java-by-keys-and-values/
          * - https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html
          */
-        ArrayList<Map.Entry<String, Integer>> list = new ArrayList(wordsCount.entrySet());
-        list.sort((Comparator) (o1, o2) -> {
-            Map.Entry<String, Integer> entry1 = (Map.Entry<String, Integer>) o1;
-            Map.Entry<String, Integer> entry2 = (Map.Entry<String, Integer>) o2;
-            return entry2.getValue() - entry1.getValue();
-        });
+        ArrayList<Map.Entry<String, Integer>> list = new ArrayList<>(wordsCount.entrySet());
+        list.sort((o1, o2) -> o2.getValue() - o1.getValue());
 
         Output.printResults(list);
     }

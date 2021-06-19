@@ -23,7 +23,5 @@ class ProcessTest {
 
         File resultFile = new File(FILES_PATH + "/" + fileName + ".txt");
         assertTrue(resultFile.exists() && resultFile.isFile());
-
-        resultFile.delete();
     }
 }

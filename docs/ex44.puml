@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App {
+}
+
+class Files {
+    +{static}getFileContent()
+    +{static}parseJson()
+}
+
+class Process {
+    -{static}getProduct()
+    +{static}process()
+}
+
+class Products {
+    -products : ArrayList<>
+
+    +Products()
+    +getProducts()
+}
+
+class Product {
+    +product()
+    +getName()
+    +getPrice()
+    +getQuantity()
+}
+
+class UsrInput {
+    +getProductName()
+}
+
+App o-->Files
+App o-->Process
+App o-->Products
+App o-->UsrInput
+
+Product*-->Products
+
+
+@enduml

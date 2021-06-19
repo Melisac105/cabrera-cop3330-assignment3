@@ -4,12 +4,13 @@ import java.io.FileNotFoundException;
 
 public class Process {
     private static Products.Product getProduct(String productName, Products products) {
+        //iterate each product in the list until find product
         for (Products.Product product : products.getProducts()) {
+            //if product is found, return product name
             if (product.name.contains(productName)) {
                 return product;
             }
         }
-
         return null;
     }
 
@@ -17,6 +18,7 @@ public class Process {
         String json = Files.getFileContent();
         Products products = Files.parseJson(json);
 
+        //iterate until product is found
         while (true) {
             String productName = UsrInput.getProductName();
             Products.Product product = Process.getProduct(productName, products);
@@ -28,7 +30,6 @@ public class Process {
                         product.getQuantity());
                 break;
             }
-
             System.out.println("Sorry, that product was not found in our inventory.");
         }
     }

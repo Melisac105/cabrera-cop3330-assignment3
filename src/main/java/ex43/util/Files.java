@@ -7,6 +7,7 @@ import java.io.IOException;
 public class Files {
 
     static void createFolder(String path) {
+        //create new directory
         File dir = new File(path);
 
         if (!dir.exists()) {
@@ -15,8 +16,11 @@ public class Files {
     }
 
     static void writeHtmlFile(String html, String path) throws IOException {
+        //create file with given path
         FileWriter fileWriter = new FileWriter(path);
+        //write html file
         fileWriter.write(html);
+        //close writer file
         fileWriter.close();
     }
 

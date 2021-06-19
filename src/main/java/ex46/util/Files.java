@@ -10,13 +10,13 @@ public class Files {
         File file = new File(path);
         Scanner scanner = new Scanner(file);
 
-        String content = "";
+        StringBuilder content = new StringBuilder();
 
         while (scanner.hasNextLine()) {
-            content += scanner.nextLine();
+            content.append(scanner.nextLine());
         }
 
-        return content;
+        return content.toString();
     }
 
 }

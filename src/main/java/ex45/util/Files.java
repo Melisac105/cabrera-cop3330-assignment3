@@ -9,21 +9,25 @@ import java.util.Scanner;
 public class Files {
 
     public static String readFileContent(String path) throws FileNotFoundException {
+        //create file with given path
         File file = new File(path);
         Scanner scanner = new Scanner(file);
 
-        String content = "";
+        StringBuilder content = new StringBuilder();
 
         while (scanner.hasNextLine()) {
-            content += scanner.nextLine();
+            //add all file information in content
+            content.append(scanner.nextLine());
         }
-
-        return content;
+        return content.toString();
     }
 
     public static void writeFile(String path, String fileContent) throws IOException {
+        //create file with given path
         FileWriter fileWriter = new FileWriter(path);
+        //write output file
         fileWriter.write(fileContent);
+        //close writer function
         fileWriter.close();
     }
 

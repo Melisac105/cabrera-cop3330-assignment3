@@ -10,6 +10,7 @@ public class UsrInput {
         Scanner input = new Scanner(System.in);
         Map<String, String> data = new HashMap<>();
 
+        //get user input
         System.out.print("Site name: ");
         String name = input.nextLine();
         System.out.print("Author: ");
@@ -19,14 +20,17 @@ public class UsrInput {
         System.out.print("Do you want a folder for CSS? ");
         String wantCSSFolder = input.nextLine();
 
+        //validate if user wants js folder
         if (wantJavascriptFolder.length() == 0) {
             wantJavascriptFolder = "n";
         }
 
+        //validate if user wants css folder
         if (wantCSSFolder.length() == 0) {
             wantCSSFolder = "n";
         }
 
+        //add user input in map
         data.put("name", name);
         data.put("author", author);
         data.put("wantJavascriptFolder", wantJavascriptFolder);

@@ -9,6 +9,7 @@ public class Products {
         double price;
         int quantity;
 
+        //get specific name, price, quantity
         public Product(String name, double price, int quantity) {
             this.name = name;
             this.price = price;

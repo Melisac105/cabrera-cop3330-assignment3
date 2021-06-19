@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class App {
+}
+
+class UsrInput {
+    +{static} getFileName()
+}
+
+class Files {
+    +{static} readFileContent()
+    +{static} writeFile
+}
+
+class Process {
+    +{static}process()
+}
+
+App o--> UsrInput
+App o--> Files
+App o--> Process
+@enduml

@@ -8,9 +8,8 @@ public class UsrInput {
         Scanner input = new Scanner(System.in);
 
         System.out.print("What is the product name? ");
-        String productName = input.nextLine();
-
-        return productName;
+        //read user input
+        return input.nextLine();
     }
 
 }

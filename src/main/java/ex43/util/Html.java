@@ -3,6 +3,7 @@ package ex43.util;
 public class Html {
 
     public static String generateHtml(String name, String author) {
+        //html format
         return """
                 <!DOCTYPE html>
                 <html>

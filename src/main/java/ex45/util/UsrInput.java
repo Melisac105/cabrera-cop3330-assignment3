@@ -8,9 +8,8 @@ public class UsrInput {
         Scanner input = new Scanner(System.in);
 
         System.out.print("What is the file name? ");
-        String fileName = input.nextLine();
-
-        return fileName;
+        //read user input
+        return input.nextLine();
     }
 
 }
