@@ -10,9 +10,11 @@ public class Process {
         String wordsFilePath = new File("src/main/java/ex46/files/words.txt").getAbsolutePath();
         String fileContent = Files.readFileContent(wordsFilePath);
 
+        //split when find blank space between words
         String[] words = fileContent.trim().split("\s+");
         HashMap<String, Integer> wordsCount = new HashMap<>();
 
+        //loop to find how many times the words are repeated
         for (String word : words) {
             int count = 0;
 
@@ -23,15 +25,11 @@ public class Process {
             wordsCount.put(word, count + 1);
         }
 
-
-        /*
-         * - https://stackoverflow.com/questions/2839137/how-to-use-comparator-in-java-to-sort
-         * - https://beginnersbook.com/2013/12/how-to-sort-hashmap-in-java-by-keys-and-values/
-         * - https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html
-         */
         ArrayList<Map.Entry<String, Integer>> list = new ArrayList<>(wordsCount.entrySet());
+        //sort list from most repeated word to less repeated word
         list.sort((o1, o2) -> o2.getValue() - o1.getValue());
 
+        //send to Output class to print sorted list
         Output.printResults(list);
     }
 

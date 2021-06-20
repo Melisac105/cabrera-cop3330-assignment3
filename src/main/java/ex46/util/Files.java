@@ -12,6 +12,7 @@ public class Files {
 
         StringBuilder content = new StringBuilder();
 
+        //read file info
         while (scanner.hasNextLine()) {
             content.append(scanner.nextLine());
         }
