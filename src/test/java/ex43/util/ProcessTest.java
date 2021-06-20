@@ -37,9 +37,7 @@ class ProcessTest {
         return  websiteFolder.exists() && websiteFolder.isDirectory();
     }
 
-    /*
-     * - https://www.baeldung.com/java-delete-directory
-     */
+
     static boolean deleteDirectory(File directoryToBeDeleted) {
         File[] allContents = directoryToBeDeleted.listFiles();
         if (allContents != null) {
@@ -60,7 +58,7 @@ class ProcessTest {
 
     @Test
     void process() throws IOException {
-        Map<String, String> data = new HashMap();
+        Map<String, String> data = new HashMap<>();
 
         FOLDERS[0] = this.generateRandomFolderName();
         data.put("name", FOLDERS[0]);
